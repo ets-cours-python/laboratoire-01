@@ -1,2 +1,2 @@
 def foo():
-	return "Hello Planet!"
+	return "Hello Dirty Planet!"
