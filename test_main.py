@@ -16,7 +16,7 @@ def script_test(nom_script, dico_var_val):
 
   # Vérifier que les variables sont présentes et/ou ont les bons noms
   var_trouvee = []
-  msg_err_1 = 'Les variables suivantes n\'ont pas été trouvées : '
+  msg_err_1 = NOUVELLE_LIGNE + 'Les variables suivantes n\'ont pas été trouvées : '
   for var in dico_var_val.keys():
     try:
       exec(f'from {nom_script} import {var}')
