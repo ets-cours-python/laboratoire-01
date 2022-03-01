@@ -27,7 +27,7 @@ def script_test(nom_script, dico_var_val):
       msg_err_1.join(f'{NOUVELLE_LIGNE + TABULATION + nom_script}>{var}')
 
   # Vérifier que les variables présentes ont les bonnes valeurs
-  msg_err_2 = 'Les tests suivants ont échoué :'
+  msg_err_2 = NOUVELLE_LIGNE + 'Les tests suivants ont échoué :'
   for var, val, est_trouvee in zip(dico_var_val.keys(), 
                                    dico_var_val.values(), 
                                    var_trouvee):
