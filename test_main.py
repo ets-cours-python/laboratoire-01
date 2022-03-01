@@ -24,7 +24,7 @@ def script_test(nom_script, dico_var_val):
     except:
       succes = False
       var_trouvee.append(False)
-      msg_err_1.append(f'{NOUVELLE_LIGNE + TABULATION + nom_script}>{var}')
+      msg_err_1.join(f'{NOUVELLE_LIGNE + TABULATION + nom_script}>{var}')
 
   # Vérifier que les variables présentes ont les bonnes valeurs
   msg_err_2 = 'Les tests suivants ont échoué :'
@@ -37,7 +37,7 @@ def script_test(nom_script, dico_var_val):
         eval(expression)
       except AssertionError as msg:
           succes = False
-          msg_err_2.append(NOUVELLE_LIGNE + TABULATION + expression)
+          msg_err_2.join(NOUVELLE_LIGNE + TABULATION + expression)
 
   # Signaler l'échec des tests et retourner les messages d'erreur
   if succes:
