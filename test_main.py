@@ -40,7 +40,11 @@ def script_test(nom_script, dico_var_val):
           msg_err_2.append(NOUVELLE_LIGNE + TABULATION + expression)
 
   # Signaler l'échec des tests et retourner les messages d'erreur
-  assert succes, msg_err_1 + msg_err_2
+  if succes:
+     return succes, ''
+   else:
+    return succes, msg_err_1 + msg_err_2
   
 def test_main():
-  script_test('somme', {'a':1, 'b':2, 'c':3})
+  succes, msg_err = script_test('somme.py', {'a':1, 'b':2, 'c':3})
+  assert succes, msg_err
