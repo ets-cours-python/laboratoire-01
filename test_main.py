@@ -42,7 +42,7 @@ def script_test(nom_script, dico_var_val):
   # Signaler l'échec des tests et retourner les messages d'erreur
   if succes:
      return succes, ''
-   else:
+  else:
     return succes, msg_err_1 + msg_err_2
   
 def test_main():
